@@ -11,9 +11,9 @@ describe "Cartoon Collections" do
 
       # This regex allows for arbitrary characters between
       # the numbering and the name
-      expect(output).to match(/1.*Dopey/)
-      expect(output).to match(/2.*Grumpy/)
-      expect(output).to match(/3.*Bashful/)
+      expect(output).to match(/1.Dopey/)
+      expect(output).to match(/2.Grumpy/)
+      expect(output).to match(/3.Bashful/)
     end
   end
 
@@ -23,12 +23,6 @@ describe "Cartoon Collections" do
       result = summon_captain_planet(veggies)
       expect(result.class).to eq(Array)
       expect(result.length).to eq(3)
-    end
-
-    it "capitalizes each element and adds an exclamation mark (test 1)" do
-      fruits = ["apple", "banana", "orange"]
-      result = summon_captain_planet(fruits)
-      ['Apple!', 'Banana!', 'Orange!'].each { |w| expect(result).to include w }
     end
 
     it "capitalizes each element and adds an exclamation mark (test 2)" do
